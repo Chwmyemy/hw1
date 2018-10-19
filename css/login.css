@@ -1,0 +1,238 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;/*段落字体，第一个不行就第二个*/
+    font-size: 100%;
+    background:url('../image/back2.jpg')no-repeat;
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+}
+h1 {
+    font-size: 3.0em;
+    color: #fff;
+    letter-spacing: 3px; /*字母间距*/
+    text-align: center; /*对齐方式*/
+    font-style: italic; /*斜体*/
+    margin: 1vw 1vw; /*上下3，左右1，1vw等于可视区宽度的百分之一*/
+    font-family: 'Josefin Sans', sans-serif;
+}
+h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 1em;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+.sub_log_in ,.sub_sign_up{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;/*为了兼容*/
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sub_log_in form {
+    max-width: 600px;
+    margin: 0 5vw;
+    background: rgba(10, 10, 10, 0.17);
+    padding: 3.5vw;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 8px solid #77887B;
+    border-radius: 30px 30px 50px 50px;
+}
+.sub_log_in  label {
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.sub_log_in input[type="submit"] {
+    color: #fff;
+    background: #77887B;
+    border: none;
+    padding: 13px 0px;
+    margin: 30px 5px 0 0;
+    outline: none;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+/*鼠标到上面变色*/
+.sub_log_in input[type="submit"]:hover {
+    background: #000;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+/*鼠标到上面变色*/
+.user {
+    margin-bottom: 1.5em;
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+}
+.user input[type="text"],
+.user input[type="password"] {
+    width: 100%;
+    color: #000;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    border: none;
+    border: 1px solid #000;
+    background: #fff;
+}
+.check {
+    width: 100%;
+}
+
+.check ul li:nth-child(1) {
+    float: left;
+}
+
+.check ul li:nth-child(2) {
+    float: right;
+}
+
+.check ul li {
+    display: inline-block;
+}
+
+.check ul li a {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.sign_up{
+    color: #fff;
+    background: #77887B;
+    border: none;
+    padding: 13px 1px;
+    margin-top: 30px;
+    outline: none;
+    width: 4cm;
+    font-size: 16px;
+    cursor: pointer;/*光标*/
+    letter-spacing: 2px;
+    text-align: center;
+}
+.sign_up:hover {
+    background: #000;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+.sub_sign_up form {
+    max-width: 600px;
+    margin: 0 5vw;
+    background: rgba(10, 10, 10, 0.17);
+    padding: 3.5vw;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 8px solid #77887B;
+    border-radius: 30px 30px 50px 50px;
+}
+.sub_sign_up  label {
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.user2 {
+    margin-bottom: 0.8em;
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+}
+.user2 input[type="text"],
+.user2 input[type="password"] {
+    width: 100%;
+    color: #000;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    border: none;
+    border: 0.4px solid #000;
+    background: #fff;
+}
+.sub_sign_up input[type="submit"] {
+    color: #fff;
+    background: #77887B;
+    border: none;
+    padding: 13px 0px;
+    margin: 20px 5px 0 0;
+    outline: none;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+/*鼠标到上面变色*/
+.sub_sign_up input[type="submit"]:hover {
+    background: #000;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+/*鼠标到上面变色*/
+.sub_sign_up h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 0.5em;
+}
+.sign_in{
+    color: #fff;
+    background: #77887B;
+    border: none;
+    padding: 13px 1px;
+    margin-top: 20px;
+    outline: none;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.sign_in:hover {
+    background: #000;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}

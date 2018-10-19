@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鸡腿假想网站登陆注册界面</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script type="text/javascript" src="js/jQuery.js"></script>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>WELCOME TO PAPIC TECH</h1>
+	<div id ="windows1">
+	<div class="sub_log_in">
+		<form  action="log_in.php" method="post" onsubmit="return enter()">
+			<h2>LOG IN NOW</h2>
+			<div class="user">
+				<label>
+					Username
+				</label>
+				<input placeholder="Username" type="text" name="Username" id="Username">
+			</div>
+			<div class="user">
+				<label>
+					Password
+				</label>
+				<input placeholder="Password" type="Password" name="Password">
+			</div>
+			<div class="check">
+				<ul>
+					<li>
+						<label>
+							<input type="checkbox" class="checkbox">
+							<span>Stay Signed In</span>
+						</label>
+					</li>
+					<li>
+						<a href="">Forgot Password?</a>
+					</li>
+				</ul>
+			</div>
+			<input type="submit" value="Log In">
+			<div class="sign_up">
+				<a href="javascript:changepage(1);" class="btn btn-success">Sign Up</a>
+			</div>
+		</form>
+	</div>
+	</div>
+	<div id="windows2" style="display: none;">
+	<div class="sub_sign_up">
+		<form action="sign_up.php" method="post" onsubmit="return sign_up()">
+			<h2>SIGN UP NOW</h2>
+			<div class="user2">
+				<label>Username</label>
+				<input placeholder="Username" type="text" name="Username2" id="Username2">
+			</div>
+			<div class="user2">
+				<label>Password</label>
+				<input placeholder="Password" type="Password" name="Password1" id="Password">
+			</div>
+			<div class="user2">
+				<label>Password agin</label>
+				<input placeholder="Password agin" type="Password" name="Password2" id="Password2">
+			</div>
+			<div class="user2">
+				<label>Email</label>
+				<input placeholder="Email" type="text" name="Email" id="Email">
+			</div>
+			<input type="submit" value="Submit">
+			<div class="sign_in">
+				<a href="javascript:changepage(2);" class="btn btn-success">Cancel</a>
+			</div>
+		</form>
+	</div>
+	</div>
+	<script type="text/javascript">
+	function changepage(value) {
+			if(value == 1){
+				$("#windows1").hide();
+				$("#windows2").show();
+				changeCode2();
+			}else{
+				$("#windows2").hide();
+				$("#windows1").show();
+				changeCode1();
+			}
+		}
+	function enter(){
+		var username=document.getElementById("Username").value;//获取form中的用户名 
+      	var regex=username;//声明一个判断用户名前后是否有空格的正则表达式 
+      	if(regex.indexOf(" ")!=-1||username.length==0)//判定用户名的是否有空格或者用户名是否为空 
+       	{ 
+          	alert("用户名格式不对"); 
+          	return false; 
+        }
+        return true;
+	}
+	function sign_up(){
+		var username=document.getElementById("Username2").value;
+		var password=document.getElementById("Password").value;
+		var password2=document.getElementById("Password2").value;
+		var email=document.getElementById("Email").value;
+		var regex=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+		var reg = /^[A-Za-z0-9]{6,20}$/;
+		if(username.indexOf(" ")!=-1||username.length==0){
+			alert("用户名格式不对");
+			return false;
+		}
+		if(!reg.test(password)){
+			alert("密码格式不对");
+			return false;
+		}
+		if(password!=password2){
+			alert("两次密码不一致");
+			return false;
+		}
+		if(!regex.test(email)){
+			alert("邮箱地址格式错误");
+			return false;
+		}
+		return true;
+	}
+	</script>
+</body>
+</html>
